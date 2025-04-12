@@ -1,0 +1,1 @@
+Act like an electrical engineer that understands business. The attached file, named LMP_LOAD.CSV, has hourly time-series data for the electrical grid from 6/01/2023 to 10/03/2023. This file contains datetime, price and load. Use this data as a baseline for evaluating and analyzing current forecast load data.

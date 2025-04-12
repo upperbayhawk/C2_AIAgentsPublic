@@ -1,0 +1,244 @@
+[2025-01-25 10:38:41.914097] DEBUG: runserver: Hello From Below: GridLoadMan-2-0-0
+[2025-01-25 10:38:42.166230] DEBUG: openaichatlib: Initializing OpenAIChatLib...
+[2025-01-25 10:38:42.425286] DEBUG: runserver: Connected with result code 0
+[2025-01-25 10:38:59.376911] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+' on topic 'openai/assistant/GridLoadMan-2-0-0/ToAssistant'
+[2025-01-25 10:38:59.377917] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-2-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+
+[2025-01-25 10:38:59.386430] DEBUG: openaichatlib: Hello. My name is Dave. What is your name?
+[2025-01-25 10:38:59.391013] DEBUG: openaichatlib: Input Message: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+
+
+[2025-01-25 10:40:09.838212] ERROR: runserver: Exception 'NoneType' object is not iterable
+[2025-01-25 10:41:27.109055] DEBUG: runserver: Hello From Below: GridLoadMan-2-0-0
+[2025-01-25 10:41:27.319884] DEBUG: openaichatlib: Initializing OpenAIChatLib...
+[2025-01-25 10:41:27.530628] DEBUG: runserver: Connected with result code 0
+[2025-01-25 10:41:44.694085] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+' on topic 'openai/assistant/GridLoadMan-2-0-0/ToAssistant'
+[2025-01-25 10:41:44.694085] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-2-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+
+[2025-01-25 10:41:44.696298] DEBUG: openaichatlib: Hello. My name is Dave. What is your name?
+[2025-01-25 10:41:44.696298] DEBUG: openaichatlib: Input Message: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+
+
+[2025-01-25 10:44:11.457048] DEBUG: xfunction: Hello From Below
+[2025-01-25 10:44:11.476426] DEBUG: XNetwork: Connected to MQTT broker
+[2025-01-25 10:44:11.476426] DEBUG: xfunction: sendGridPeakedDetected: Peak detected to C2Agent
+[2025-01-25 10:44:11.617336] ERROR: runserver: Exception Error code: 400 - {'error': {'message': "Unsupported value: 'messages[3].role' does not support 'function' with this model.", 'type': 'invalid_request_error', 'param': 'messages[3].role', 'code': 'unsupported_value'}}
+[2025-01-25 10:46:00.741725] DEBUG: runserver: Hello From Below: GridLoadMan-2-0-0
+[2025-01-25 10:46:00.961399] DEBUG: openaichatlib: Initializing OpenAIChatLib...
+[2025-01-25 10:46:01.187474] DEBUG: runserver: Connected with result code 0
+[2025-01-25 10:46:21.453189] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+' on topic 'openai/assistant/GridLoadMan-2-0-0/ToAssistant'
+[2025-01-25 10:46:21.454293] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-2-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+
+[2025-01-25 10:46:21.455295] DEBUG: openaichatlib: Hello. My name is Dave. What is your name?
+[2025-01-25 10:46:21.456293] DEBUG: openaichatlib: Input Message: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 11:00:00,108700,41.18043,28,Sunny,2479,44.07105
+01/25/2025 12:00:00,105780,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103995,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102988,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103216,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105719,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110616,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+
+
+[2025-01-25 10:46:40.933940] DEBUG: xfunction: Hello From Below
+[2025-01-25 10:46:40.944130] DEBUG: XNetwork: Connected to MQTT broker
+[2025-01-25 10:46:40.944659] DEBUG: xfunction: sendGridPeakedDetected: Maximum Price detected with level SILVER to C2Agent
+[2025-01-25 10:46:40.944659] DEBUG: xfunction: Hello From Below
+[2025-01-25 10:46:40.966283] DEBUG: XNetwork: Connected to MQTT broker
+[2025-01-25 10:46:41.966443] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid Peak Detected: SILVER level at 01/25/2025 17:00:00 with LMP 46.71268. to openai/assistant/GridLoadMan-2-0-0/CommandCenter
+[2025-01-25 10:46:41.966960] DEBUG: xfunction: Hello From Below
+[2025-01-25 10:46:41.978483] DEBUG: XNetwork: Connected to MQTT broker
+[2025-01-25 10:46:41.978483] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid Peak Detected: SILVER level at 01/25/2025 17:00:00 with LMP 46.71268. to openai/assistant/GridLoadMan-2-0-0/ControlPanel
+[2025-01-25 10:46:49.952837] DEBUG: openaichatlib: Assistant: ChatCompletionMessage(content="Let's examine the data and calculate the required statistics:\n\n### Statistical Calculations\n\n**Load**\n- Average: 108,270.33\n- Maximum: 113,445 (Datetime: 01/25/2025 18:00:00)\n- Minimum: 102,988\n- Standard Deviation: 3,585.74\n\n**Price**\n- Average: 41.35\n- Maximum: 46.71 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 33.72\n- Standard Deviation: 4.49\n\n**Temp**\n- Average: 29.33\n- Maximum: 33 (Datetime: multiple times)\n- Minimum: 27\n- Standard Deviation: 2.06\n\n**Forecast**\n- Average: N/A (qualitative data)\n- Maximum: N/A\n- Minimum: N/A\n- Standard Deviation: N/A\n\n**LocalLoad**\n- Average: 2,563.58\n- Maximum: 2,764 (Datetime: 01/25/2025 20:00:00)\n- Minimum: 2,176\n- Standard Deviation: 216.86\n\n**LocalPrice**\n- Average: 49.93\n- Maximum: 60.67 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 36.01\n- Standard Deviation: 9.02\n\n### Game Conditions Evaluation\n\n- **Condition 1:** Maximum Load (113,445) is not greater than 140,000.\n- **Condition 2:** Maximum LocalLoad (2,764) is not greater than 3,500.\n- **Condition 3:** Maximum Price (46.71) is greater than 30.\n\nSince Condition 3 is met:\n- **Game Type:** SHEDPOWER\n- **Award Level:** SILVER\n- **Start Time:** 01/25/2025 17:00:00 (Eastern Time)\n- **LMP:** 46.71\n\n### Actions\n- Sent a `GridPeakDetected` message to C2Agent.\n- Sent notices to CommandCenter and ControlPanel.\n\nAll results and actions are based on the data provided using the defined conditions and calculations. If new data appears, I will re-evaluate as needed.", refusal=None, role='assistant', function_call=None, tool_calls=None)
+[2025-01-25 10:46:49.953836] DEBUG: runserver: Finished and publishing results to client: ChatCompletionMessage(content="Let's examine the data and calculate the required statistics:\n\n### Statistical Calculations\n\n**Load**\n- Average: 108,270.33\n- Maximum: 113,445 (Datetime: 01/25/2025 18:00:00)\n- Minimum: 102,988\n- Standard Deviation: 3,585.74\n\n**Price**\n- Average: 41.35\n- Maximum: 46.71 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 33.72\n- Standard Deviation: 4.49\n\n**Temp**\n- Average: 29.33\n- Maximum: 33 (Datetime: multiple times)\n- Minimum: 27\n- Standard Deviation: 2.06\n\n**Forecast**\n- Average: N/A (qualitative data)\n- Maximum: N/A\n- Minimum: N/A\n- Standard Deviation: N/A\n\n**LocalLoad**\n- Average: 2,563.58\n- Maximum: 2,764 (Datetime: 01/25/2025 20:00:00)\n- Minimum: 2,176\n- Standard Deviation: 216.86\n\n**LocalPrice**\n- Average: 49.93\n- Maximum: 60.67 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 36.01\n- Standard Deviation: 9.02\n\n### Game Conditions Evaluation\n\n- **Condition 1:** Maximum Load (113,445) is not greater than 140,000.\n- **Condition 2:** Maximum LocalLoad (2,764) is not greater than 3,500.\n- **Condition 3:** Maximum Price (46.71) is greater than 30.\n\nSince Condition 3 is met:\n- **Game Type:** SHEDPOWER\n- **Award Level:** SILVER\n- **Start Time:** 01/25/2025 17:00:00 (Eastern Time)\n- **LMP:** 46.71\n\n### Actions\n- Sent a `GridPeakDetected` message to C2Agent.\n- Sent notices to CommandCenter and ControlPanel.\n\nAll results and actions are based on the data provided using the defined conditions and calculations. If new data appears, I will re-evaluate as needed.", refusal=None, role='assistant', function_call=None, tool_calls=None)
+[2025-01-25 10:46:49.954850] DEBUG: runserver: last_message: ChatCompletionMessage(content="Let's examine the data and calculate the required statistics:\n\n### Statistical Calculations\n\n**Load**\n- Average: 108,270.33\n- Maximum: 113,445 (Datetime: 01/25/2025 18:00:00)\n- Minimum: 102,988\n- Standard Deviation: 3,585.74\n\n**Price**\n- Average: 41.35\n- Maximum: 46.71 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 33.72\n- Standard Deviation: 4.49\n\n**Temp**\n- Average: 29.33\n- Maximum: 33 (Datetime: multiple times)\n- Minimum: 27\n- Standard Deviation: 2.06\n\n**Forecast**\n- Average: N/A (qualitative data)\n- Maximum: N/A\n- Minimum: N/A\n- Standard Deviation: N/A\n\n**LocalLoad**\n- Average: 2,563.58\n- Maximum: 2,764 (Datetime: 01/25/2025 20:00:00)\n- Minimum: 2,176\n- Standard Deviation: 216.86\n\n**LocalPrice**\n- Average: 49.93\n- Maximum: 60.67 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 36.01\n- Standard Deviation: 9.02\n\n### Game Conditions Evaluation\n\n- **Condition 1:** Maximum Load (113,445) is not greater than 140,000.\n- **Condition 2:** Maximum LocalLoad (2,764) is not greater than 3,500.\n- **Condition 3:** Maximum Price (46.71) is greater than 30.\n\nSince Condition 3 is met:\n- **Game Type:** SHEDPOWER\n- **Award Level:** SILVER\n- **Start Time:** 01/25/2025 17:00:00 (Eastern Time)\n- **LMP:** 46.71\n\n### Actions\n- Sent a `GridPeakDetected` message to C2Agent.\n- Sent notices to CommandCenter and ControlPanel.\n\nAll results and actions are based on the data provided using the defined conditions and calculations. If new data appears, I will re-evaluate as needed.", refusal=None, role='assistant', function_call=None, tool_calls=None)
+[2025-01-25 10:46:49.956361] DEBUG: runserver: Received message 'ChatCompletionMessage(content="Let's examine the data and calculate the required statistics:\n\n### Statistical Calculations\n\n**Load**\n- Average: 108,270.33\n- Maximum: 113,445 (Datetime: 01/25/2025 18:00:00)\n- Minimum: 102,988\n- Standard Deviation: 3,585.74\n\n**Price**\n- Average: 41.35\n- Maximum: 46.71 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 33.72\n- Standard Deviation: 4.49\n\n**Temp**\n- Average: 29.33\n- Maximum: 33 (Datetime: multiple times)\n- Minimum: 27\n- Standard Deviation: 2.06\n\n**Forecast**\n- Average: N/A (qualitative data)\n- Maximum: N/A\n- Minimum: N/A\n- Standard Deviation: N/A\n\n**LocalLoad**\n- Average: 2,563.58\n- Maximum: 2,764 (Datetime: 01/25/2025 20:00:00)\n- Minimum: 2,176\n- Standard Deviation: 216.86\n\n**LocalPrice**\n- Average: 49.93\n- Maximum: 60.67 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 36.01\n- Standard Deviation: 9.02\n\n### Game Conditions Evaluation\n\n- **Condition 1:** Maximum Load (113,445) is not greater than 140,000.\n- **Condition 2:** Maximum LocalLoad (2,764) is not greater than 3,500.\n- **Condition 3:** Maximum Price (46.71) is greater than 30.\n\nSince Condition 3 is met:\n- **Game Type:** SHEDPOWER\n- **Award Level:** SILVER\n- **Start Time:** 01/25/2025 17:00:00 (Eastern Time)\n- **LMP:** 46.71\n\n### Actions\n- Sent a `GridPeakDetected` message to C2Agent.\n- Sent notices to CommandCenter and ControlPanel.\n\nAll results and actions are based on the data provided using the defined conditions and calculations. If new data appears, I will re-evaluate as needed.", refusal=None, role='assistant', function_call=None, tool_calls=None)' on topic 'openai/assistant/GridLoadMan-2-0-0/ToClient'
+[2025-01-25 10:46:49.956361] DEBUG: runserver: To Client Outbound: openai/assistant/GridLoadMan-2-0-0/ToClient ChatCompletionMessage(content="Let's examine the data and calculate the required statistics:\n\n### Statistical Calculations\n\n**Load**\n- Average: 108,270.33\n- Maximum: 113,445 (Datetime: 01/25/2025 18:00:00)\n- Minimum: 102,988\n- Standard Deviation: 3,585.74\n\n**Price**\n- Average: 41.35\n- Maximum: 46.71 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 33.72\n- Standard Deviation: 4.49\n\n**Temp**\n- Average: 29.33\n- Maximum: 33 (Datetime: multiple times)\n- Minimum: 27\n- Standard Deviation: 2.06\n\n**Forecast**\n- Average: N/A (qualitative data)\n- Maximum: N/A\n- Minimum: N/A\n- Standard Deviation: N/A\n\n**LocalLoad**\n- Average: 2,563.58\n- Maximum: 2,764 (Datetime: 01/25/2025 20:00:00)\n- Minimum: 2,176\n- Standard Deviation: 216.86\n\n**LocalPrice**\n- Average: 49.93\n- Maximum: 60.67 (Datetime: 01/25/2025 17:00:00)\n- Minimum: 36.01\n- Standard Deviation: 9.02\n\n### Game Conditions Evaluation\n\n- **Condition 1:** Maximum Load (113,445) is not greater than 140,000.\n- **Condition 2:** Maximum LocalLoad (2,764) is not greater than 3,500.\n- **Condition 3:** Maximum Price (46.71) is greater than 30.\n\nSince Condition 3 is met:\n- **Game Type:** SHEDPOWER\n- **Award Level:** SILVER\n- **Start Time:** 01/25/2025 17:00:00 (Eastern Time)\n- **LMP:** 46.71\n\n### Actions\n- Sent a `GridPeakDetected` message to C2Agent.\n- Sent notices to CommandCenter and ControlPanel.\n\nAll results and actions are based on the data provided using the defined conditions and calculations. If new data appears, I will re-evaluate as needed.", refusal=None, role='assistant', function_call=None, tool_calls=None)
+[2025-01-25 11:06:01.702936] DEBUG: runserver: Hello From Below: GridLoadMan-2-0-0
+[2025-01-25 11:06:01.908596] DEBUG: openaichatlib: Initializing OpenAIChatLib...
+[2025-01-25 11:06:02.109223] DEBUG: runserver: Connected with result code 0
+[2025-01-25 11:06:09.600517] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 12:00:00,105805,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103804,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102729,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103000,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105482,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110581,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+' on topic 'openai/assistant/GridLoadMan-2-0-0/ToAssistant'
+[2025-01-25 11:06:09.600517] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-2-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 12:00:00,105805,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103804,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102729,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103000,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105482,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110581,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+
+[2025-01-25 11:06:09.603523] DEBUG: openaichatlib: Hello. My name is Dave. What is your name?
+[2025-01-25 11:06:09.604526] DEBUG: openaichatlib: Input Message: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. DateTime is in Eastern timezone and 24 hr format. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Send all time values as Eastern time. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+01/25/2025 12:00:00,105805,35.81778,30,Sunny,2343,37.85676
+01/25/2025 13:00:00,103804,34.82496,32,Mostly Sunny,2241,36.83335
+01/25/2025 14:00:00,102729,33.71569,33,Partly Sunny,2176,36.00771
+01/25/2025 15:00:00,103000,33.87513,33,Partly Sunny,2214,36.55028
+01/25/2025 16:00:00,105482,38.14418,33,Mostly Sunny,2356,47.17017
+01/25/2025 17:00:00,110581,46.71268,32,Mostly Sunny,2565,60.67069
+01/25/2025 18:00:00,113445,46.31501,30,Partly Cloudy,2696,57.52363
+01/25/2025 19:00:00,113310,46.26754,29,Partly Cloudy,2747,58.05441
+01/25/2025 20:00:00,112329,44.39016,28,Partly Cloudy,2764,54.78046
+01/25/2025 21:00:00,110189,42.37617,28,Mostly Cloudy,2754,58.59579
+01/25/2025 22:00:00,107383,41.01666,28,Mostly Cloudy,2691,54.38812
+01/25/2025 23:00:00,104254,40.4529,27,Partly Cloudy,2634,55.29686
+
+
+[2025-01-25 11:07:18.232611] DEBUG: xfunction: Hello From Below
+[2025-01-25 11:07:18.249977] DEBUG: XNetwork: Connected to MQTT broker
+[2025-01-25 11:07:18.251025] DEBUG: xfunction: sendGridPeakedDetected: Peak price condition triggered SHEDPOWER with SILVER award. to C2Agent
+[2025-01-25 11:07:18.374861] ERROR: runserver: Exception Error code: 400 - {'error': {'message': "Invalid parameter: messages with role 'tool' must be a response to a preceeding message with 'tool_calls'.", 'type': 'invalid_request_error', 'param': 'messages.[3].role', 'code': None}}

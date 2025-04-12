@@ -1,0 +1,334 @@
+[2024-08-19 10:47:52.896993] DEBUG: runserver: Hello From Below: GridLoadMan-2-0-0
+[2024-08-19 10:47:53.385548] DEBUG: runserver: Connected with result code 0
+[2024-08-19 10:47:53.387073] DEBUG: openailib: Initializing OpenAILib...
+[2024-08-19 10:47:53.809548] DEBUG: openailib: Agent found!GridLoadMan-2-0-0
+[2024-08-19 10:47:54.199573] DEBUG: openailib: Thread Object: Thread(id='thread_Ul61usI2qUUX2XQBFZvpTm41', created_at=1724078883, metadata={}, object='thread', tool_resources=ToolResources(code_interpreter=None, file_search=None))
+
+[2024-08-19 10:47:54.207796] DEBUG: openailib: Hello. My name is Dave. What is your name?
+[2024-08-19 10:47:54.518868] DEBUG: openailib: Message Object: Message(id='msg_iXnqfd6s8zy4W2dftJjHe1Px', assistant_id=None, attachments=[], completed_at=None, content=[TextContentBlock(text=Text(annotations=[], value='Hello. My name is Dave. What is your name?'), type='text')], created_at=1724078883, incomplete_at=None, incomplete_details=None, metadata={}, object='thread.message', role='user', run_id=None, status=None, thread_id='thread_Ul61usI2qUUX2XQBFZvpTm41') 
+
+[2024-08-19 10:47:55.595273] DEBUG: openailib: Run Object: Run(id='run_IBuo5yuHjjoDn4a2gJvc5kJp', assistant_id='asst_OvBjWoSO2OiVlpvCSCB5Lc5v', cancelled_at=None, completed_at=None, created_at=1724078884, expires_at=1724079484, failed_at=None, incomplete_details=None, instructions='Act like an a very smart data analyst and provide answers that are concise. You have all the mathamatical algorithms available to you. I will be sending you new data, with the same instructions each time, periodically so continue to examine the data and provide results, even if the data has not changed. Call my functions each time you run the prompt.', last_error=None, max_completion_tokens=None, max_prompt_tokens=None, metadata={}, model='gpt-4o', object='thread.run', parallel_tool_calls=True, required_action=None, response_format='auto', started_at=None, status='queued', thread_id='thread_Ul61usI2qUUX2XQBFZvpTm41', tool_choice='auto', tools=[CodeInterpreterTool(type='code_interpreter'), FunctionTool(function=FunctionDefinition(name='sendAlarmSignalToNetworkNode', description='Send an alarm signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alarm signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendControlSignalToNetworkNode', description='Send a control signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the control signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendNoticeSignalToNetworkNode', description='Send a notice signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the notice signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendCommandSignalToNetworkNode', description='Send a command signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the command signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendAlertSignalToNetworkNode', description='Send an alert signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alert signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getNickname', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getMagicNumber', description='This number is magical.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the magic number'}}, 'required': ['tagname']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getSensorValuebyName', description='Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}}, 'required': ['tagname']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='putSensorValuebyName', description='Put the value of a sensor into the cache using its name.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}, 'value': {'type': 'string', 'description': 'The value of the sensor.'}}, 'required': ['tagname', 'value']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendGridPeakDetected', description='Send a grid peak detected to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The description of the peak detected.'}, 'start_date_time': {'type': 'string', 'description': 'The datetime of the peak detected.'}, 'duration_mins': {'type': 'string', 'description': 'The duration in minutes of the peak detected.'}, 'peak_lmp': {'type': 'string', 'description': 'The LMP for a megawatt-hour during the peak detected.'}, 'grid_node': {'type': 'string', 'description': 'The grid pricing node for the peak detected .'}, 'award_level': {'type': 'string', 'description': 'The award level of the game. Values can be BRONZE, SILVER and GOLD'}, 'game_type': {'type': 'string', 'description': 'The type of game that is being played. The values can be SHEDPOWER or HARVESTPOWER'}}, 'required': ['network_node', 'message', 'start_date_time', 'duration_mins', 'peak_lmp', 'grid_node', 'award_level', 'game_type']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getNickname3', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}, strict=False), type='function')], truncation_strategy=TruncationStrategy(type='auto', last_messages=None), usage=None, temperature=1.0, top_p=1.0, tool_resources={}) 
+
+[2024-08-19 10:47:58.607148] DEBUG: openailib: User: Hello. My name is Dave. What is your name?
+[2024-08-19 10:47:58.607148] DEBUG: openailib: Assistant: Hello Dave. I'm an advanced data analyst here to help you with data analysis and other tasks you may need assistance with. How can I help you today?
+[2024-08-19 10:48:13.354403] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+08/19/2024 11:00:00,104315,28.95593,77,Mostly Sunny,2446,32.1595
+08/19/2024 12:00:00,107218,30.52134,80,Mostly Sunny,2555,32.02911
+08/19/2024 13:00:00,109434,33.03495,82,Mostly Sunny,2640,40.71982
+08/19/2024 14:00:00,111379,33.54884,82,Slight Chance Showers And Thunderstorms,2723,41.41951
+08/19/2024 15:00:00,112139,36.37482,83,Chance Showers And Thunderstorms,2784,53.59082
+08/19/2024 16:00:00,112659,40.48467,83,Chance Showers And Thunderstorms,2831,75.30487
+08/19/2024 17:00:00,112506,37.66767,81,Showers And Thunderstorms Likely,2863,63.83391
+08/19/2024 18:00:00,110790,35.66483,79,Chance Showers And Thunderstorms,2814,46.7856
+08/19/2024 19:00:00,107709,34.2245,77,Chance Showers And Thunderstorms,2686,38.53604
+08/19/2024 20:00:00,104381,32.0593,74,Slight Chance Showers And Thunderstorms,2562,37.63054
+08/19/2024 21:00:00,100030,26.46402,72,Slight Chance Showers And Thunderstorms,2416,27.01603
+08/19/2024 22:00:00,94245,21.92141,70,Slight Chance Showers And Thunderstorms,2218,24.45116
+08/19/2024 23:00:00,88000,18.68625,69,Slight Chance Showers And Thunderstorms,2018,20.64222
+' on topic 'openai/assistant/GridLoadMan-2-0-0/ToAssistant'
+[2024-08-19 10:48:13.354403] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-2-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+08/19/2024 11:00:00,104315,28.95593,77,Mostly Sunny,2446,32.1595
+08/19/2024 12:00:00,107218,30.52134,80,Mostly Sunny,2555,32.02911
+08/19/2024 13:00:00,109434,33.03495,82,Mostly Sunny,2640,40.71982
+08/19/2024 14:00:00,111379,33.54884,82,Slight Chance Showers And Thunderstorms,2723,41.41951
+08/19/2024 15:00:00,112139,36.37482,83,Chance Showers And Thunderstorms,2784,53.59082
+08/19/2024 16:00:00,112659,40.48467,83,Chance Showers And Thunderstorms,2831,75.30487
+08/19/2024 17:00:00,112506,37.66767,81,Showers And Thunderstorms Likely,2863,63.83391
+08/19/2024 18:00:00,110790,35.66483,79,Chance Showers And Thunderstorms,2814,46.7856
+08/19/2024 19:00:00,107709,34.2245,77,Chance Showers And Thunderstorms,2686,38.53604
+08/19/2024 20:00:00,104381,32.0593,74,Slight Chance Showers And Thunderstorms,2562,37.63054
+08/19/2024 21:00:00,100030,26.46402,72,Slight Chance Showers And Thunderstorms,2416,27.01603
+08/19/2024 22:00:00,94245,21.92141,70,Slight Chance Showers And Thunderstorms,2218,24.45116
+08/19/2024 23:00:00,88000,18.68625,69,Slight Chance Showers And Thunderstorms,2018,20.64222
+
+[2024-08-19 10:48:13.354975] DEBUG: openailib: Input Message: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+08/19/2024 11:00:00,104315,28.95593,77,Mostly Sunny,2446,32.1595
+08/19/2024 12:00:00,107218,30.52134,80,Mostly Sunny,2555,32.02911
+08/19/2024 13:00:00,109434,33.03495,82,Mostly Sunny,2640,40.71982
+08/19/2024 14:00:00,111379,33.54884,82,Slight Chance Showers And Thunderstorms,2723,41.41951
+08/19/2024 15:00:00,112139,36.37482,83,Chance Showers And Thunderstorms,2784,53.59082
+08/19/2024 16:00:00,112659,40.48467,83,Chance Showers And Thunderstorms,2831,75.30487
+08/19/2024 17:00:00,112506,37.66767,81,Showers And Thunderstorms Likely,2863,63.83391
+08/19/2024 18:00:00,110790,35.66483,79,Chance Showers And Thunderstorms,2814,46.7856
+08/19/2024 19:00:00,107709,34.2245,77,Chance Showers And Thunderstorms,2686,38.53604
+08/19/2024 20:00:00,104381,32.0593,74,Slight Chance Showers And Thunderstorms,2562,37.63054
+08/19/2024 21:00:00,100030,26.46402,72,Slight Chance Showers And Thunderstorms,2416,27.01603
+08/19/2024 22:00:00,94245,21.92141,70,Slight Chance Showers And Thunderstorms,2218,24.45116
+08/19/2024 23:00:00,88000,18.68625,69,Slight Chance Showers And Thunderstorms,2018,20.64222
+
+
+[2024-08-19 10:48:13.618263] DEBUG: openailib: Message Object: Message(id='msg_e9QE6xP5Teji9EL1xcgXWeYx', assistant_id=None, attachments=[], completed_at=None, content=[TextContentBlock(text=Text(annotations=[], value='Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.\r\n\r\nData values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice\r\n08/19/2024 11:00:00,104315,28.95593,77,Mostly Sunny,2446,32.1595\r\n08/19/2024 12:00:00,107218,30.52134,80,Mostly Sunny,2555,32.02911\r\n08/19/2024 13:00:00,109434,33.03495,82,Mostly Sunny,2640,40.71982\r\n08/19/2024 14:00:00,111379,33.54884,82,Slight Chance Showers And Thunderstorms,2723,41.41951\r\n08/19/2024 15:00:00,112139,36.37482,83,Chance Showers And Thunderstorms,2784,53.59082\r\n08/19/2024 16:00:00,112659,40.48467,83,Chance Showers And Thunderstorms,2831,75.30487\r\n08/19/2024 17:00:00,112506,37.66767,81,Showers And Thunderstorms Likely,2863,63.83391\r\n08/19/2024 18:00:00,110790,35.66483,79,Chance Showers And Thunderstorms,2814,46.7856\r\n08/19/2024 19:00:00,107709,34.2245,77,Chance Showers And Thunderstorms,2686,38.53604\r\n08/19/2024 20:00:00,104381,32.0593,74,Slight Chance Showers And Thunderstorms,2562,37.63054\r\n08/19/2024 21:00:00,100030,26.46402,72,Slight Chance Showers And Thunderstorms,2416,27.01603\r\n08/19/2024 22:00:00,94245,21.92141,70,Slight Chance Showers And Thunderstorms,2218,24.45116\r\n08/19/2024 23:00:00,88000,18.68625,69,Slight Chance Showers And Thunderstorms,2018,20.64222\r\n'), type='text')], created_at=1724078902, incomplete_at=None, incomplete_details=None, metadata={}, object='thread.message', role='user', run_id=None, status=None, thread_id='thread_Ul61usI2qUUX2XQBFZvpTm41') 
+
+[2024-08-19 10:48:14.176240] DEBUG: openailib: Run Object: Run(id='run_89DMmU3WigCTzXjmLAG4aeUA', assistant_id='asst_OvBjWoSO2OiVlpvCSCB5Lc5v', cancelled_at=None, completed_at=None, created_at=1724078903, expires_at=1724079503, failed_at=None, incomplete_details=None, instructions='Act like an a very smart data analyst and provide answers that are concise. You have all the mathamatical algorithms available to you. I will be sending you new data, with the same instructions each time, periodically so continue to examine the data and provide results, even if the data has not changed. Call my functions each time you run the prompt.', last_error=None, max_completion_tokens=None, max_prompt_tokens=None, metadata={}, model='gpt-4o', object='thread.run', parallel_tool_calls=True, required_action=None, response_format='auto', started_at=None, status='queued', thread_id='thread_Ul61usI2qUUX2XQBFZvpTm41', tool_choice='auto', tools=[CodeInterpreterTool(type='code_interpreter'), FunctionTool(function=FunctionDefinition(name='sendAlarmSignalToNetworkNode', description='Send an alarm signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alarm signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendControlSignalToNetworkNode', description='Send a control signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the control signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendNoticeSignalToNetworkNode', description='Send a notice signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the notice signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendCommandSignalToNetworkNode', description='Send a command signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the command signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendAlertSignalToNetworkNode', description='Send an alert signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alert signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getNickname', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getMagicNumber', description='This number is magical.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the magic number'}}, 'required': ['tagname']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getSensorValuebyName', description='Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}}, 'required': ['tagname']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='putSensorValuebyName', description='Put the value of a sensor into the cache using its name.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}, 'value': {'type': 'string', 'description': 'The value of the sensor.'}}, 'required': ['tagname', 'value']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendGridPeakDetected', description='Send a grid peak detected to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The description of the peak detected.'}, 'start_date_time': {'type': 'string', 'description': 'The datetime of the peak detected.'}, 'duration_mins': {'type': 'string', 'description': 'The duration in minutes of the peak detected.'}, 'peak_lmp': {'type': 'string', 'description': 'The LMP for a megawatt-hour during the peak detected.'}, 'grid_node': {'type': 'string', 'description': 'The grid pricing node for the peak detected .'}, 'award_level': {'type': 'string', 'description': 'The award level of the game. Values can be BRONZE, SILVER and GOLD'}, 'game_type': {'type': 'string', 'description': 'The type of game that is being played. The values can be SHEDPOWER or HARVESTPOWER'}}, 'required': ['network_node', 'message', 'start_date_time', 'duration_mins', 'peak_lmp', 'grid_node', 'award_level', 'game_type']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getNickname3', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}, strict=False), type='function')], truncation_strategy=TruncationStrategy(type='auto', last_messages=None), usage=None, temperature=1.0, top_p=1.0, tool_resources={}) 
+
+[2024-08-19 10:48:54.558033] DEBUG: openailib: sendGridPeakDetected
+[2024-08-19 10:48:54.558033] DEBUG: openailib: {"network_node": "C2Agent", "message": "Grid peak detected. Details: SHEDPOWER, SILVER.", "start_date_time": "2024-08-19 16:00:00", "duration_mins": "120", "peak_lmp": "40.48", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2024-08-19 10:48:54.558033] DEBUG: xfunction: Hello From Below
+[2024-08-19 10:48:54.571677] DEBUG: XNetwork: Connected to MQTT broker
+[2024-08-19 10:48:54.571677] DEBUG: xfunction: sendGridPeakedDetected: Grid peak detected. Details: SHEDPOWER, SILVER. to C2Agent
+[2024-08-19 10:48:54.571677] DEBUG: openailib: sendNoticeSignalToNetworkNode
+[2024-08-19 10:48:54.571677] DEBUG: openailib: {"network_node": "CommandCenter", "message": "Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48."}
+[2024-08-19 10:48:54.571677] DEBUG: xfunction: Hello From Below
+[2024-08-19 10:48:54.593360] DEBUG: XNetwork: Connected to MQTT broker
+[2024-08-19 10:48:54.594333] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48. to openai/assistant/GridLoadMan-2-0-0/CommandCenter
+[2024-08-19 10:48:54.594333] DEBUG: openailib: sendNoticeSignalToNetworkNode
+[2024-08-19 10:48:54.594333] DEBUG: openailib: {"network_node": "ControlPanel", "message": "Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48."}
+[2024-08-19 10:48:54.596317] DEBUG: xfunction: Hello From Below
+[2024-08-19 10:48:54.609450] DEBUG: XNetwork: Connected to MQTT broker
+[2024-08-19 10:48:54.610378] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48. to openai/assistant/GridLoadMan-2-0-0/ControlPanel
+[2024-08-19 10:49:10.857090] DEBUG: openailib: ------------------------------------------------------------ 
+
+[2024-08-19 10:49:12.671384] DEBUG: openailib: All Message Count: 4
+[2024-08-19 10:49:12.675238] DEBUG: openailib: User Message Count: 1
+[2024-08-19 10:49:12.675238] DEBUG: openailib: Assistant Message Count: 1
+[2024-08-19 10:49:12.675238] DEBUG: openailib: User: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+08/19/2024 11:00:00,104315,28.95593,77,Mostly Sunny,2446,32.1595
+08/19/2024 12:00:00,107218,30.52134,80,Mostly Sunny,2555,32.02911
+08/19/2024 13:00:00,109434,33.03495,82,Mostly Sunny,2640,40.71982
+08/19/2024 14:00:00,111379,33.54884,82,Slight Chance Showers And Thunderstorms,2723,41.41951
+08/19/2024 15:00:00,112139,36.37482,83,Chance Showers And Thunderstorms,2784,53.59082
+08/19/2024 16:00:00,112659,40.48467,83,Chance Showers And Thunderstorms,2831,75.30487
+08/19/2024 17:00:00,112506,37.66767,81,Showers And Thunderstorms Likely,2863,63.83391
+08/19/2024 18:00:00,110790,35.66483,79,Chance Showers And Thunderstorms,2814,46.7856
+08/19/2024 19:00:00,107709,34.2245,77,Chance Showers And Thunderstorms,2686,38.53604
+08/19/2024 20:00:00,104381,32.0593,74,Slight Chance Showers And Thunderstorms,2562,37.63054
+08/19/2024 21:00:00,100030,26.46402,72,Slight Chance Showers And Thunderstorms,2416,27.01603
+08/19/2024 22:00:00,94245,21.92141,70,Slight Chance Showers And Thunderstorms,2218,24.45116
+08/19/2024 23:00:00,88000,18.68625,69,Slight Chance Showers And Thunderstorms,2018,20.64222
+
+[2024-08-19 10:49:12.676243] DEBUG: openailib: Assistant: ### Statistics:
+- **Load:**
+  - Average: 105754.23
+  - Maximum: 112659 (at 2024-08-19 16:00:00)
+  - Minimum: 88000
+  - Std Dev: 7609.91
+- **Price:**
+  - Average: 31.51
+  - Maximum: 40.48 (at 2024-08-19 16:00:00)
+  - Minimum: 18.69
+  - Std Dev: 6.21
+- **Temp:**
+  - Average: 77.62
+  - Maximum: 83 (at 2024-08-19 15:00:00)
+  - Minimum: 69
+  - Std Dev: 4.94
+- **LocalLoad:**
+  - Average: 2581.23
+  - Maximum: 2863 (at 2024-08-19 17:00:00)
+  - Minimum: 2018
+  - Std Dev: 252.89
+- **LocalPrice:**
+  - Average: 41.09
+  - Maximum: 75.30 (at 2024-08-19 16:00:00)
+  - Minimum: 20.64
+  - Std Dev: 15.68
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-19 16:00:00
+- **LMP:** 40.48
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48 (sent to CommandCenter and ControlPanel).
+[2024-08-19 10:49:12.678488] DEBUG: openailib: last_message: ### Statistics:
+- **Load:**
+  - Average: 105754.23
+  - Maximum: 112659 (at 2024-08-19 16:00:00)
+  - Minimum: 88000
+  - Std Dev: 7609.91
+- **Price:**
+  - Average: 31.51
+  - Maximum: 40.48 (at 2024-08-19 16:00:00)
+  - Minimum: 18.69
+  - Std Dev: 6.21
+- **Temp:**
+  - Average: 77.62
+  - Maximum: 83 (at 2024-08-19 15:00:00)
+  - Minimum: 69
+  - Std Dev: 4.94
+- **LocalLoad:**
+  - Average: 2581.23
+  - Maximum: 2863 (at 2024-08-19 17:00:00)
+  - Minimum: 2018
+  - Std Dev: 252.89
+- **LocalPrice:**
+  - Average: 41.09
+  - Maximum: 75.30 (at 2024-08-19 16:00:00)
+  - Minimum: 20.64
+  - Std Dev: 15.68
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-19 16:00:00
+- **LMP:** 40.48
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48 (sent to CommandCenter and ControlPanel).
+[2024-08-19 10:49:12.678488] DEBUG: runserver: Finished and publishing results to client: ### Statistics:
+- **Load:**
+  - Average: 105754.23
+  - Maximum: 112659 (at 2024-08-19 16:00:00)
+  - Minimum: 88000
+  - Std Dev: 7609.91
+- **Price:**
+  - Average: 31.51
+  - Maximum: 40.48 (at 2024-08-19 16:00:00)
+  - Minimum: 18.69
+  - Std Dev: 6.21
+- **Temp:**
+  - Average: 77.62
+  - Maximum: 83 (at 2024-08-19 15:00:00)
+  - Minimum: 69
+  - Std Dev: 4.94
+- **LocalLoad:**
+  - Average: 2581.23
+  - Maximum: 2863 (at 2024-08-19 17:00:00)
+  - Minimum: 2018
+  - Std Dev: 252.89
+- **LocalPrice:**
+  - Average: 41.09
+  - Maximum: 75.30 (at 2024-08-19 16:00:00)
+  - Minimum: 20.64
+  - Std Dev: 15.68
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-19 16:00:00
+- **LMP:** 40.48
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48 (sent to CommandCenter and ControlPanel).
+[2024-08-19 10:49:12.679697] DEBUG: runserver: last_message: ### Statistics:
+- **Load:**
+  - Average: 105754.23
+  - Maximum: 112659 (at 2024-08-19 16:00:00)
+  - Minimum: 88000
+  - Std Dev: 7609.91
+- **Price:**
+  - Average: 31.51
+  - Maximum: 40.48 (at 2024-08-19 16:00:00)
+  - Minimum: 18.69
+  - Std Dev: 6.21
+- **Temp:**
+  - Average: 77.62
+  - Maximum: 83 (at 2024-08-19 15:00:00)
+  - Minimum: 69
+  - Std Dev: 4.94
+- **LocalLoad:**
+  - Average: 2581.23
+  - Maximum: 2863 (at 2024-08-19 17:00:00)
+  - Minimum: 2018
+  - Std Dev: 252.89
+- **LocalPrice:**
+  - Average: 41.09
+  - Maximum: 75.30 (at 2024-08-19 16:00:00)
+  - Minimum: 20.64
+  - Std Dev: 15.68
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-19 16:00:00
+- **LMP:** 40.48
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48 (sent to CommandCenter and ControlPanel).
+[2024-08-19 10:49:12.681505] DEBUG: runserver: Received message '### Statistics:
+- **Load:**
+  - Average: 105754.23
+  - Maximum: 112659 (at 2024-08-19 16:00:00)
+  - Minimum: 88000
+  - Std Dev: 7609.91
+- **Price:**
+  - Average: 31.51
+  - Maximum: 40.48 (at 2024-08-19 16:00:00)
+  - Minimum: 18.69
+  - Std Dev: 6.21
+- **Temp:**
+  - Average: 77.62
+  - Maximum: 83 (at 2024-08-19 15:00:00)
+  - Minimum: 69
+  - Std Dev: 4.94
+- **LocalLoad:**
+  - Average: 2581.23
+  - Maximum: 2863 (at 2024-08-19 17:00:00)
+  - Minimum: 2018
+  - Std Dev: 252.89
+- **LocalPrice:**
+  - Average: 41.09
+  - Maximum: 75.30 (at 2024-08-19 16:00:00)
+  - Minimum: 20.64
+  - Std Dev: 15.68
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-19 16:00:00
+- **LMP:** 40.48
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48 (sent to CommandCenter and ControlPanel).' on topic 'openai/assistant/GridLoadMan-2-0-0/ToClient'
+[2024-08-19 10:49:12.681505] DEBUG: runserver: To Client Outbound: openai/assistant/GridLoadMan-2-0-0/ToClient ### Statistics:
+- **Load:**
+  - Average: 105754.23
+  - Maximum: 112659 (at 2024-08-19 16:00:00)
+  - Minimum: 88000
+  - Std Dev: 7609.91
+- **Price:**
+  - Average: 31.51
+  - Maximum: 40.48 (at 2024-08-19 16:00:00)
+  - Minimum: 18.69
+  - Std Dev: 6.21
+- **Temp:**
+  - Average: 77.62
+  - Maximum: 83 (at 2024-08-19 15:00:00)
+  - Minimum: 69
+  - Std Dev: 4.94
+- **LocalLoad:**
+  - Average: 2581.23
+  - Maximum: 2863 (at 2024-08-19 17:00:00)
+  - Minimum: 2018
+  - Std Dev: 252.89
+- **LocalPrice:**
+  - Average: 41.09
+  - Maximum: 75.30 (at 2024-08-19 16:00:00)
+  - Minimum: 20.64
+  - Std Dev: 15.68
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-19 16:00:00
+- **LMP:** 40.48
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-19 16:00:00. Details: SHEDPOWER, SILVER, LMP: 40.48 (sent to CommandCenter and ControlPanel).

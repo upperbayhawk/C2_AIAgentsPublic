@@ -1,0 +1,34 @@
+[2024-04-26 08:00:10.284748] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. A datetime value, a load data value and a price data value for the grid system, the temperature forecast and weather condition forecast, the load and price for the local area. The values are at 1 hour intervals and are for the current day. Calculate the average, maximum and minimum values of the load and price data and for the local load and price data for all the data values and save the time of the maximum load value and the price at that time and the local load and price data. Store the maximum forecast temperature using the function putSensorValueByName with the name "MaxTempForecast" If the maximum price value is greater than 40, then the game_type is "SHEDPOWER" and the award_level is "GOLD". If the maximum value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER". If the value is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE". If the value is less than 20, then it is "NOGAME". Set the PeakLmp to the price. If the value is not "NOGAME", then send a GridPeakDetected massage to C2Agent. Use two decimal places for all calculations. The number of hours is 2. If a GridPeakDetected message was sent, then also send the message as a  notice to CommandCenter and to the ControlPanel. The grid node is "PJM". The LMP to the price when the load value is maximum. Set the startime to the datetime when the value was selected and set the duration to 120 mins. What is the projected_peak_datetime_ept and pjm_load_forecast in the operations report JSON data?
+
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+04/26/2024 09:00:00,82983,20.10354,48,Sunny,1777,20.998
+04/26/2024 10:00:00,80951,18.80295,52,Sunny,1699,19.68199
+04/26/2024 11:00:00,79341,18.09716,56,Sunny,1642,18.85413
+04/26/2024 12:00:00,78135,18.01537,58,Sunny,1590,17.89086
+04/26/2024 13:00:00,77300,17.86905,60,Sunny,1547,17.72803
+04/26/2024 14:00:00,76598,17.93345,61,Sunny,1534,17.37465
+04/26/2024 15:00:00,76278,17.98281,62,Sunny,1548,18.20187
+04/26/2024 16:00:00,77084,17.9935,62,Sunny,1582,17.35494
+04/26/2024 17:00:00,78360,19.28782,61,Sunny,1661,18.11675
+04/26/2024 18:00:00,79110,20.82116,59,Mostly Clear,1729,19.95259
+04/26/2024 19:00:00,79983,25.44078,56,Mostly Clear,1802,21.4118
+04/26/2024 20:00:00,81530,27.87104,53,Mostly Clear,1862,26.5982
+04/26/2024 21:00:00,80396,21.98111,49,Mostly Clear,1817,22.36092
+04/26/2024 22:00:00,77061,18.86473,47,Mostly Clear,1725,21.55172
+04/26/2024 23:00:00,73334,16.02098,45,Mostly Clear,1625,19.53853
+
+Operations Summary in JSON follows: 
+{"links":[{"rel":"self","href":"https://api.pjm.com/api/v1/ops_sum_frcst_peak_rto?RowCount=1&Order=Asc&StartRow=1&IsActiveMetadata=True&Fields=area%2Ccapacity_adjustments%2Cgenerated_at_ept%2Cinternal_scheduled_capacity%2Cload_forecast%2Coperating_reserve%2Cprojected_peak_datetime_ept%2Cprojected_peak_datetime_utc%2Cscheduled_tie_flow_total%2Ctotal_scheduled_capacity%2Cunscheduled_steam_capacity&projected_peak_datetime_ept=2024-04-26T00%3A00%3A00.0000000"},{"rel":"metadata","href":"https://api.pjm.com/api/v1/ops_sum_frcst_peak_rto/metadata"}],"items":[{"projected_peak_datetime_utc":"2024-04-26T11:00:00","projected_peak_datetime_ept":"2024-04-26T07:00:00","generated_at_ept":"2024-04-26T07:01:50","area":"PJM RTO","internal_scheduled_capacity":117792.00,"scheduled_tie_flow_total":-2409.00,"capacity_adjustments":0.00,"total_scheduled_capacity":115383.00,"load_forecast":86202.00,"operating_reserve":29181.00,"unscheduled_steam_capacity":17439.00}],"searchSpecification":{"rowCount":1,"order":"Asc","startRow":1,"isActiveMetadata":true,"fields":["area","capacity_adjustments","generated_at_ept","internal_scheduled_capacity","load_forecast","operating_reserve","projected_peak_datetime_ept","projected_peak_datetime_utc","scheduled_tie_flow_total","total_scheduled_capacity","unscheduled_steam_capacity"],"filters":[{"projected_peak_datetime_ept":"2024-04-26T00:00:00.0000000"}]},"totalRows":1}
+[2024-04-26 08:02:51.516767] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "A peak has been detected in the PJM grid.", "start_date_time": "04/26/2024 09:00:00", "duration_mins": "120", "peak_lmp": "20.10354", "grid_node": "PJM", "award_level": "BRONZE", "game_type": "SHEDPOWER"}
+[2024-04-26 08:02:51.564936] DEBUG: runsink: A peak has been detected in the PJM grid with a BRONZE level award for SHEDPOWER game.
+[2024-04-26 08:02:51.565934] DEBUG: runsink: A peak has been detected in the PJM grid with a BRONZE level award for SHEDPOWER game.
+[2024-04-26 08:03:02.263117] DEBUG: runsink: The analysis of the new time series data has been completed, and based on the provided data:
+
+- The maximum forecast temperature of **62** degrees has been stored.
+- A **GridPeakDetected** message was sent to the **C2Agent** indicating a peak in the PJM grid with a BRONZE level award for the SHEDPOWER game, based on the analysis.
+- Notices were also sent to both the **CommandCenter** and the **ControlPanel**, informing them of the detected peak and its implications.
+
+Furthermore, the projected peak datetime (EPT) for this dataset is **2024-04-26T07:00:00**, and the PJM load forecast is **86202** as per the operations report JSON data provided. 
+
+If there's anything more you need or another analysis you'd like to conduct, feel free to let me know!

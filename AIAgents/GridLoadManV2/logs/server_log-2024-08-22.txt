@@ -1,0 +1,325 @@
+[2024-08-22 09:30:07.033394] DEBUG: runserver: Received message 'Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+08/22/2024 10:00:00,86000,16.11403,69,Sunny,1755,15.85005
+08/22/2024 11:00:00,87715,17.46786,72,Sunny,1793,17.34504
+08/22/2024 12:00:00,89756,19.33902,74,Sunny,1840,19.2973
+08/22/2024 13:00:00,92159,21.22624,75,Sunny,1905,21.42572
+08/22/2024 14:00:00,94430,23.39123,76,Sunny,1976,24.14001
+08/22/2024 15:00:00,96541,23.09968,76,Sunny,2052,22.21145
+08/22/2024 16:00:00,98859,27.21721,77,Sunny,2144,22.87365
+08/22/2024 17:00:00,100403,29.4579,77,Sunny,2221,27.56328
+08/22/2024 18:00:00,100002,30.62213,75,Mostly Clear,2257,28.90296
+08/22/2024 19:00:00,98152,29.4876,74,Mostly Clear,2215,28.22359
+08/22/2024 20:00:00,95648,27.769,71,Mostly Clear,2152,28.6771
+08/22/2024 21:00:00,92431,22.8629,68,Mostly Clear,2058,23.30489
+08/22/2024 22:00:00,86706,19.45175,65,Mostly Clear,1886,20.36897
+08/22/2024 23:00:00,80769,14.82993,64,Clear,1711,15.75622
+' on topic 'openai/assistant/GridLoadMan-2-0-0/ToAssistant'
+[2024-08-22 09:30:07.033394] DEBUG: runserver: To Assistant Inbound: openai/assistant/GridLoadMan-2-0-0/ToAssistant Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+08/22/2024 10:00:00,86000,16.11403,69,Sunny,1755,15.85005
+08/22/2024 11:00:00,87715,17.46786,72,Sunny,1793,17.34504
+08/22/2024 12:00:00,89756,19.33902,74,Sunny,1840,19.2973
+08/22/2024 13:00:00,92159,21.22624,75,Sunny,1905,21.42572
+08/22/2024 14:00:00,94430,23.39123,76,Sunny,1976,24.14001
+08/22/2024 15:00:00,96541,23.09968,76,Sunny,2052,22.21145
+08/22/2024 16:00:00,98859,27.21721,77,Sunny,2144,22.87365
+08/22/2024 17:00:00,100403,29.4579,77,Sunny,2221,27.56328
+08/22/2024 18:00:00,100002,30.62213,75,Mostly Clear,2257,28.90296
+08/22/2024 19:00:00,98152,29.4876,74,Mostly Clear,2215,28.22359
+08/22/2024 20:00:00,95648,27.769,71,Mostly Clear,2152,28.6771
+08/22/2024 21:00:00,92431,22.8629,68,Mostly Clear,2058,23.30489
+08/22/2024 22:00:00,86706,19.45175,65,Mostly Clear,1886,20.36897
+08/22/2024 23:00:00,80769,14.82993,64,Clear,1711,15.75622
+
+[2024-08-22 09:30:07.035750] DEBUG: openailib: Input Message: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+08/22/2024 10:00:00,86000,16.11403,69,Sunny,1755,15.85005
+08/22/2024 11:00:00,87715,17.46786,72,Sunny,1793,17.34504
+08/22/2024 12:00:00,89756,19.33902,74,Sunny,1840,19.2973
+08/22/2024 13:00:00,92159,21.22624,75,Sunny,1905,21.42572
+08/22/2024 14:00:00,94430,23.39123,76,Sunny,1976,24.14001
+08/22/2024 15:00:00,96541,23.09968,76,Sunny,2052,22.21145
+08/22/2024 16:00:00,98859,27.21721,77,Sunny,2144,22.87365
+08/22/2024 17:00:00,100403,29.4579,77,Sunny,2221,27.56328
+08/22/2024 18:00:00,100002,30.62213,75,Mostly Clear,2257,28.90296
+08/22/2024 19:00:00,98152,29.4876,74,Mostly Clear,2215,28.22359
+08/22/2024 20:00:00,95648,27.769,71,Mostly Clear,2152,28.6771
+08/22/2024 21:00:00,92431,22.8629,68,Mostly Clear,2058,23.30489
+08/22/2024 22:00:00,86706,19.45175,65,Mostly Clear,1886,20.36897
+08/22/2024 23:00:00,80769,14.82993,64,Clear,1711,15.75622
+
+
+[2024-08-22 09:30:07.466704] DEBUG: openailib: Message Object: Message(id='msg_kkAfOKodlZ8j1EUQvSbseYh9', assistant_id=None, attachments=[], completed_at=None, content=[TextContentBlock(text=Text(annotations=[], value='Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.\r\n\r\nData values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice\r\n08/22/2024 10:00:00,86000,16.11403,69,Sunny,1755,15.85005\r\n08/22/2024 11:00:00,87715,17.46786,72,Sunny,1793,17.34504\r\n08/22/2024 12:00:00,89756,19.33902,74,Sunny,1840,19.2973\r\n08/22/2024 13:00:00,92159,21.22624,75,Sunny,1905,21.42572\r\n08/22/2024 14:00:00,94430,23.39123,76,Sunny,1976,24.14001\r\n08/22/2024 15:00:00,96541,23.09968,76,Sunny,2052,22.21145\r\n08/22/2024 16:00:00,98859,27.21721,77,Sunny,2144,22.87365\r\n08/22/2024 17:00:00,100403,29.4579,77,Sunny,2221,27.56328\r\n08/22/2024 18:00:00,100002,30.62213,75,Mostly Clear,2257,28.90296\r\n08/22/2024 19:00:00,98152,29.4876,74,Mostly Clear,2215,28.22359\r\n08/22/2024 20:00:00,95648,27.769,71,Mostly Clear,2152,28.6771\r\n08/22/2024 21:00:00,92431,22.8629,68,Mostly Clear,2058,23.30489\r\n08/22/2024 22:00:00,86706,19.45175,65,Mostly Clear,1886,20.36897\r\n08/22/2024 23:00:00,80769,14.82993,64,Clear,1711,15.75622\r\n'), type='text')], created_at=1724333420, incomplete_at=None, incomplete_details=None, metadata={}, object='thread.message', role='user', run_id=None, status=None, thread_id='thread_Ul61usI2qUUX2XQBFZvpTm41') 
+
+[2024-08-22 09:30:09.769986] DEBUG: openailib: Run Object: Run(id='run_lxJ2xJsZ64a63j4ScVerQJYi', assistant_id='asst_OvBjWoSO2OiVlpvCSCB5Lc5v', cancelled_at=None, completed_at=None, created_at=1724333421, expires_at=1724334021, failed_at=None, incomplete_details=None, instructions='Act like an a very smart data analyst and provide answers that are concise. You have all the mathamatical algorithms available to you. I will be sending you new data, with the same instructions each time, periodically so continue to examine the data and provide results, even if the data has not changed. Call my functions each time you run the prompt.', last_error=None, max_completion_tokens=None, max_prompt_tokens=None, metadata={}, model='gpt-4o', object='thread.run', parallel_tool_calls=True, required_action=None, response_format='auto', started_at=None, status='queued', thread_id='thread_Ul61usI2qUUX2XQBFZvpTm41', tool_choice='auto', tools=[CodeInterpreterTool(type='code_interpreter'), FunctionTool(function=FunctionDefinition(name='sendAlarmSignalToNetworkNode', description='Send an alarm signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alarm signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendControlSignalToNetworkNode', description='Send a control signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the control signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendNoticeSignalToNetworkNode', description='Send a notice signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the notice signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendCommandSignalToNetworkNode', description='Send a command signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the command signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendAlertSignalToNetworkNode', description='Send an alert signal to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The contents of the alert signal message.'}}, 'required': ['network_node', 'message']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getNickname', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getMagicNumber', description='This number is magical.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the magic number'}}, 'required': ['tagname']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getSensorValuebyName', description='Get the value of a sensor by its name. The value is NOTFOUND if the sensor is not available', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}}, 'required': ['tagname']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='putSensorValuebyName', description='Put the value of a sensor into the cache using its name.', parameters={'type': 'object', 'properties': {'tagname': {'type': 'string', 'description': 'The name of the sensor.'}, 'value': {'type': 'string', 'description': 'The value of the sensor.'}}, 'required': ['tagname', 'value']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='sendGridPeakDetected', description='Send a grid peak detected to a destination network node.', parameters={'type': 'object', 'properties': {'network_node': {'type': 'string', 'description': 'The name of a node on the network. Network node names include C2Agent, AlarmPanel, ControlPanel, NoticePanel, AlertPanel, CommandCenter.'}, 'message': {'type': 'string', 'description': 'The description of the peak detected.'}, 'start_date_time': {'type': 'string', 'description': 'The datetime of the peak detected.'}, 'duration_mins': {'type': 'string', 'description': 'The duration in minutes of the peak detected.'}, 'peak_lmp': {'type': 'string', 'description': 'The LMP for a megawatt-hour during the peak detected.'}, 'grid_node': {'type': 'string', 'description': 'The grid pricing node for the peak detected .'}, 'award_level': {'type': 'string', 'description': 'The award level of the game. Values can be BRONZE, SILVER and GOLD'}, 'game_type': {'type': 'string', 'description': 'The type of game that is being played. The values can be SHEDPOWER or HARVESTPOWER'}}, 'required': ['network_node', 'message', 'start_date_time', 'duration_mins', 'peak_lmp', 'grid_node', 'award_level', 'game_type']}, strict=False), type='function'), FunctionTool(function=FunctionDefinition(name='getNickname3', description='Get the nickname of a city', parameters={'type': 'object', 'properties': {'location': {'type': 'string', 'description': 'The city and state e.g. San Francisco, CA'}}, 'required': ['location']}, strict=False), type='function')], truncation_strategy=TruncationStrategy(type='auto', last_messages=None), usage=None, temperature=1.0, top_p=1.0, tool_resources={}) 
+
+[2024-08-22 09:31:03.958098] DEBUG: openailib: sendGridPeakDetected
+[2024-08-22 09:31:03.958098] DEBUG: openailib: {"network_node": "C2Agent", "message": "Grid peak detected. Details: SHEDPOWER, SILVER.", "start_date_time": "2024-08-22 18:00:00", "duration_mins": "120", "peak_lmp": "29.46", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2024-08-22 09:31:03.958098] DEBUG: xfunction: Hello From Below
+[2024-08-22 09:31:03.979222] DEBUG: XNetwork: Connected to MQTT broker
+[2024-08-22 09:31:03.979222] DEBUG: xfunction: sendGridPeakedDetected: Grid peak detected. Details: SHEDPOWER, SILVER. to C2Agent
+[2024-08-22 09:31:03.980464] DEBUG: openailib: sendNoticeSignalToNetworkNode
+[2024-08-22 09:31:03.980464] DEBUG: openailib: {"network_node": "CommandCenter", "message": "Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46."}
+[2024-08-22 09:31:03.980464] DEBUG: xfunction: Hello From Below
+[2024-08-22 09:31:04.002623] DEBUG: XNetwork: Connected to MQTT broker
+[2024-08-22 09:31:04.003455] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46. to openai/assistant/GridLoadMan-2-0-0/CommandCenter
+[2024-08-22 09:31:04.004125] DEBUG: openailib: sendNoticeSignalToNetworkNode
+[2024-08-22 09:31:04.004125] DEBUG: openailib: {"network_node": "ControlPanel", "message": "Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46."}
+[2024-08-22 09:31:04.004381] DEBUG: xfunction: Hello From Below
+[2024-08-22 09:31:04.020331] DEBUG: XNetwork: Connected to MQTT broker
+[2024-08-22 09:31:04.021221] DEBUG: xfunction: sendNoticeSignalToNetworkNode: Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46. to openai/assistant/GridLoadMan-2-0-0/ControlPanel
+[2024-08-22 09:31:13.808504] DEBUG: openailib: ------------------------------------------------------------ 
+
+[2024-08-22 09:31:14.247924] DEBUG: openailib: All Message Count: 10
+[2024-08-22 09:31:14.249695] DEBUG: openailib: User Message Count: 1
+[2024-08-22 09:31:14.249695] DEBUG: openailib: Assistant Message Count: 1
+[2024-08-22 09:31:14.249695] DEBUG: openailib: User: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+08/22/2024 10:00:00,86000,16.11403,69,Sunny,1755,15.85005
+08/22/2024 11:00:00,87715,17.46786,72,Sunny,1793,17.34504
+08/22/2024 12:00:00,89756,19.33902,74,Sunny,1840,19.2973
+08/22/2024 13:00:00,92159,21.22624,75,Sunny,1905,21.42572
+08/22/2024 14:00:00,94430,23.39123,76,Sunny,1976,24.14001
+08/22/2024 15:00:00,96541,23.09968,76,Sunny,2052,22.21145
+08/22/2024 16:00:00,98859,27.21721,77,Sunny,2144,22.87365
+08/22/2024 17:00:00,100403,29.4579,77,Sunny,2221,27.56328
+08/22/2024 18:00:00,100002,30.62213,75,Mostly Clear,2257,28.90296
+08/22/2024 19:00:00,98152,29.4876,74,Mostly Clear,2215,28.22359
+08/22/2024 20:00:00,95648,27.769,71,Mostly Clear,2152,28.6771
+08/22/2024 21:00:00,92431,22.8629,68,Mostly Clear,2058,23.30489
+08/22/2024 22:00:00,86706,19.45175,65,Mostly Clear,1886,20.36897
+08/22/2024 23:00:00,80769,14.82993,64,Clear,1711,15.75622
+
+[2024-08-22 09:31:14.249695] DEBUG: openailib: Assistant: ### Statistics:
+- **Load:**
+  - Average: 92826.50
+  - Maximum: 100403 (at 2024-08-22 17:00:00)
+  - Minimum: 80769
+  - Std Dev: 5971.57
+- **Price:**
+  - Average: 23.02
+  - Maximum: 30.62 (at 2024-08-22 18:00:00)
+  - Minimum: 14.83
+  - Std Dev: 5.24
+- **Temp:**
+  - Average: 72.36
+  - Maximum: 77 (at 2024-08-22 16:00:00)
+  - Minimum: 64
+  - Std Dev: 4.34
+- **LocalLoad:**
+  - Average: 1997.50
+  - Maximum: 2257 (at 2024-08-22 18:00:00)
+  - Minimum: 1711
+  - Std Dev: 185.13
+- **LocalPrice:**
+  - Average: 22.57
+  - Maximum: 28.90 (at 2024-08-22 18:00:00)
+  - Minimum: 15.76
+  - Std Dev: 4.58
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-22 18:00:00
+- **LMP:** 29.46
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46 (sent to CommandCenter and ControlPanel).
+[2024-08-22 09:31:14.249695] DEBUG: openailib: last_message: ### Statistics:
+- **Load:**
+  - Average: 92826.50
+  - Maximum: 100403 (at 2024-08-22 17:00:00)
+  - Minimum: 80769
+  - Std Dev: 5971.57
+- **Price:**
+  - Average: 23.02
+  - Maximum: 30.62 (at 2024-08-22 18:00:00)
+  - Minimum: 14.83
+  - Std Dev: 5.24
+- **Temp:**
+  - Average: 72.36
+  - Maximum: 77 (at 2024-08-22 16:00:00)
+  - Minimum: 64
+  - Std Dev: 4.34
+- **LocalLoad:**
+  - Average: 1997.50
+  - Maximum: 2257 (at 2024-08-22 18:00:00)
+  - Minimum: 1711
+  - Std Dev: 185.13
+- **LocalPrice:**
+  - Average: 22.57
+  - Maximum: 28.90 (at 2024-08-22 18:00:00)
+  - Minimum: 15.76
+  - Std Dev: 4.58
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-22 18:00:00
+- **LMP:** 29.46
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46 (sent to CommandCenter and ControlPanel).
+[2024-08-22 09:31:14.252108] DEBUG: runserver: Finished and publishing results to client: ### Statistics:
+- **Load:**
+  - Average: 92826.50
+  - Maximum: 100403 (at 2024-08-22 17:00:00)
+  - Minimum: 80769
+  - Std Dev: 5971.57
+- **Price:**
+  - Average: 23.02
+  - Maximum: 30.62 (at 2024-08-22 18:00:00)
+  - Minimum: 14.83
+  - Std Dev: 5.24
+- **Temp:**
+  - Average: 72.36
+  - Maximum: 77 (at 2024-08-22 16:00:00)
+  - Minimum: 64
+  - Std Dev: 4.34
+- **LocalLoad:**
+  - Average: 1997.50
+  - Maximum: 2257 (at 2024-08-22 18:00:00)
+  - Minimum: 1711
+  - Std Dev: 185.13
+- **LocalPrice:**
+  - Average: 22.57
+  - Maximum: 28.90 (at 2024-08-22 18:00:00)
+  - Minimum: 15.76
+  - Std Dev: 4.58
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-22 18:00:00
+- **LMP:** 29.46
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46 (sent to CommandCenter and ControlPanel).
+[2024-08-22 09:31:14.252108] DEBUG: runserver: last_message: ### Statistics:
+- **Load:**
+  - Average: 92826.50
+  - Maximum: 100403 (at 2024-08-22 17:00:00)
+  - Minimum: 80769
+  - Std Dev: 5971.57
+- **Price:**
+  - Average: 23.02
+  - Maximum: 30.62 (at 2024-08-22 18:00:00)
+  - Minimum: 14.83
+  - Std Dev: 5.24
+- **Temp:**
+  - Average: 72.36
+  - Maximum: 77 (at 2024-08-22 16:00:00)
+  - Minimum: 64
+  - Std Dev: 4.34
+- **LocalLoad:**
+  - Average: 1997.50
+  - Maximum: 2257 (at 2024-08-22 18:00:00)
+  - Minimum: 1711
+  - Std Dev: 185.13
+- **LocalPrice:**
+  - Average: 22.57
+  - Maximum: 28.90 (at 2024-08-22 18:00:00)
+  - Minimum: 15.76
+  - Std Dev: 4.58
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-22 18:00:00
+- **LMP:** 29.46
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46 (sent to CommandCenter and ControlPanel).
+[2024-08-22 09:31:14.255966] DEBUG: runserver: Received message '### Statistics:
+- **Load:**
+  - Average: 92826.50
+  - Maximum: 100403 (at 2024-08-22 17:00:00)
+  - Minimum: 80769
+  - Std Dev: 5971.57
+- **Price:**
+  - Average: 23.02
+  - Maximum: 30.62 (at 2024-08-22 18:00:00)
+  - Minimum: 14.83
+  - Std Dev: 5.24
+- **Temp:**
+  - Average: 72.36
+  - Maximum: 77 (at 2024-08-22 16:00:00)
+  - Minimum: 64
+  - Std Dev: 4.34
+- **LocalLoad:**
+  - Average: 1997.50
+  - Maximum: 2257 (at 2024-08-22 18:00:00)
+  - Minimum: 1711
+  - Std Dev: 185.13
+- **LocalPrice:**
+  - Average: 22.57
+  - Maximum: 28.90 (at 2024-08-22 18:00:00)
+  - Minimum: 15.76
+  - Std Dev: 4.58
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-22 18:00:00
+- **LMP:** 29.46
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46 (sent to CommandCenter and ControlPanel).' on topic 'openai/assistant/GridLoadMan-2-0-0/ToClient'
+[2024-08-22 09:31:14.255966] DEBUG: runserver: To Client Outbound: openai/assistant/GridLoadMan-2-0-0/ToClient ### Statistics:
+- **Load:**
+  - Average: 92826.50
+  - Maximum: 100403 (at 2024-08-22 17:00:00)
+  - Minimum: 80769
+  - Std Dev: 5971.57
+- **Price:**
+  - Average: 23.02
+  - Maximum: 30.62 (at 2024-08-22 18:00:00)
+  - Minimum: 14.83
+  - Std Dev: 5.24
+- **Temp:**
+  - Average: 72.36
+  - Maximum: 77 (at 2024-08-22 16:00:00)
+  - Minimum: 64
+  - Std Dev: 4.34
+- **LocalLoad:**
+  - Average: 1997.50
+  - Maximum: 2257 (at 2024-08-22 18:00:00)
+  - Minimum: 1711
+  - Std Dev: 185.13
+- **LocalPrice:**
+  - Average: 22.57
+  - Maximum: 28.90 (at 2024-08-22 18:00:00)
+  - Minimum: 15.76
+  - Std Dev: 4.58
+
+### Game Details:
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 2024-08-22 18:00:00
+- **LMP:** 29.46
+- **Duration:** 120 mins
+- **Grid Node:** PJM
+
+### Notifications Sent:
+- Grid peak detected. Details: SHEDPOWER, SILVER.
+- Grid peak detected at 2024-08-22 18:00:00. Details: SHEDPOWER, SILVER, LMP: 29.46 (sent to CommandCenter and ControlPanel).

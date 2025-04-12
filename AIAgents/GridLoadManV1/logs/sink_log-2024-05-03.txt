@@ -1,0 +1,34 @@
+[2024-05-03 08:00:28.948759] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 130,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+05/03/2024 09:00:00,84988,32.80596,60,Partly Sunny,1819,22.55605
+05/03/2024 10:00:00,86787,33.79014,61,Partly Sunny,1833,20.86757
+05/03/2024 11:00:00,88445,34.27704,63,Partly Sunny,1860,19.19291
+05/03/2024 12:00:00,90034,36.40926,64,Partly Sunny,1847,18.37778
+05/03/2024 13:00:00,91787,38.51232,65,Mostly Sunny,1861,15.77462
+05/03/2024 14:00:00,93402,38.10908,65,Mostly Sunny,1890,12.68043
+05/03/2024 15:00:00,94185,36.54689,65,Partly Sunny,1924,10.51837
+05/03/2024 16:00:00,94606,38.55993,64,Partly Sunny,1974,12.77401
+05/03/2024 17:00:00,94384,38.88907,64,Partly Sunny,2025,13.0375
+05/03/2024 18:00:00,92996,35.79394,62,Mostly Cloudy,2032,12.74055
+05/03/2024 19:00:00,91312,37.31228,59,Mostly Cloudy,2016,19.09869
+05/03/2024 20:00:00,89579,36.71861,57,Mostly Cloudy,1973,20.70032
+05/03/2024 21:00:00,86101,29.7307,55,Partly Cloudy,1888,16.66689
+05/03/2024 22:00:00,81358,25.84027,54,Mostly Cloudy,1762,15.22466
+05/03/2024 23:00:00,76168,21.84616,52,Mostly Cloudy,1631,17.4585
+
+[2024-05-03 08:02:12.815662] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-1-0-0", "message": "Grid peak detected. Initiating SHEDPOWER strategy.", "start_date_time": "05/03/2024 17:00:00", "duration_mins": "120", "peak_lmp": "38.88907", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2024-05-03 08:02:12.862501] DEBUG: runsink: Grid peak detected at 05/03/2024 17:00:00 with LMP of 38.88907. Award level: SILVER.
+[2024-05-03 08:02:13.836320] DEBUG: runsink: Grid peak detected at 05/03/2024 17:00:00 with LMP of 38.88907. Award level: SILVER.
+[2024-05-03 08:02:23.304886] DEBUG: runsink: The analysis of the provided time series data is completed. Here are the highlights:
+
+- **Game Type:** SHEDPOWER
+- **Award Level:** SILVER
+- **Start Time:** 05/03/2024 17:00:00
+- **LMP:** 38.88907
+- **Grid Node:** PJM
+- **Duration:** 120 minutes
+
+Notices concerning the detected grid peak, indicating the initiation of a SHEDPOWER strategy with a SILVER award level, have been successfully dispatched to the C2Agent, CommandCenter, and ControlPanel.
+
+Should there be more data for analysis or other inquiries, please feel free to inform me!

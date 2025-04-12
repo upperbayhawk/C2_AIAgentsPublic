@@ -1,0 +1,1 @@
+The data below is the seven day hourly temperature forecast. It is in CSV format and contains datetime, temperature in degrees F and the weather forecast. Analyze the data using average, minumum, maximum, and standard deviation to give insights into the near-term behavior of the weather. The data follows:
