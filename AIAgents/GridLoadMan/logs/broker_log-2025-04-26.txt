@@ -1,0 +1,52 @@
+[2025-04-26 09:30:20.817935] INFO: runbroker: added: 1,{"type_name": "GridPeakDetected", "agent_name": "OPENAIMINI", "message": "Maximum Load exceeded 140,000. Load at start time: 81348, Price at start time: 51.99. Game Type: SHEDPOWER, Award Level: GOLD.", "start_date_time": "2025-04-26 20:00:00", "duration_mins": "120", "peak_lmp": "51.99", "grid_node": "PJM", "award_level": "GOLD", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:20.916638] INFO: runbroker: added: 2,{"type_name": "GridPeakDetected", "agent_name": "OPENAI", "message": "Grid peak detected with load of 81348, price of 51.98714 at 04/26/2025 20:00:00", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.98714", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:21.347946] INFO: runbroker: added: 3,{"type_name": "GridPeakDetected", "agent_name": "OPENAIO3", "message": "Peak detected with maximum price.", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.99", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:21.558630] INFO: runbroker: added: 4,{"type_name": "GridPeakDetected", "agent_name": "LAMA", "message": "Peak detected with SILVER level at 04/26/2025 20:00:00", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.99", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:22.209926] INFO: runbroker: added: 5,{"type_name": "GridPeakDetected", "agent_name": "DEEPSEEK", "message": "Maximum Price above 30 detected.", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.99", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:23.507001] INFO: runbroker: added: 6,{"type_name": "GridPeakDetected", "agent_name": "CLAUDE", "message": "Peak Load Condition Met", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.99", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:23.924925] INFO: runbroker: added: 7,{"type_name": "GridPeakDetected", "agent_name": "GOOGLE", "message": "Grid peak detected with maximum Price, starting at 20:00.", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.99", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:24.171758] INFO: runbroker: added: 8,{"type_name": "GridPeakDetected", "agent_name": "GROK", "message": "Maximum Price exceeded threshold with a SHEDPOWER game initiated.", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.99", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:25.926374] INFO: runbroker: added: 9,{"type_name": "GridPeakDetected", "agent_name": "OPENAI45", "message": "Max Price detected with SHEDPOWER game.", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.98714", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:50.829972] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIMINI != OPENAI
+[2025-04-26 09:30:50.829972] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOLD != SILVER
+[2025-04-26 09:30:50.830766] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIMINI != OPENAIO3
+[2025-04-26 09:30:50.830766] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOLD != SILVER
+[2025-04-26 09:30:50.830766] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIMINI != LAMA
+[2025-04-26 09:30:50.830766] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOLD != SILVER
+[2025-04-26 09:30:50.831777] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIMINI != DEEPSEEK
+[2025-04-26 09:30:50.831777] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOLD != SILVER
+[2025-04-26 09:30:50.831777] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIMINI != CLAUDE
+[2025-04-26 09:30:50.832772] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOLD != SILVER
+[2025-04-26 09:30:50.832772] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIMINI != GOOGLE
+[2025-04-26 09:30:50.832772] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOLD != SILVER
+[2025-04-26 09:30:50.832772] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIMINI != GROK
+[2025-04-26 09:30:50.832772] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOLD != SILVER
+[2025-04-26 09:30:50.832772] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIMINI != OPENAI45
+[2025-04-26 09:30:50.832772] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOLD != SILVER
+[2025-04-26 09:30:50.834275] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAI != OPENAIMINI
+[2025-04-26 09:30:50.834275] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: SILVER != GOLD
+[2025-04-26 09:30:50.837279] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAIO3 != OPENAIMINI
+[2025-04-26 09:30:50.837279] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: SILVER != GOLD
+[2025-04-26 09:30:50.841279] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: LAMA != OPENAIMINI
+[2025-04-26 09:30:50.841279] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: SILVER != GOLD
+[2025-04-26 09:30:50.844224] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: DEEPSEEK != OPENAIMINI
+[2025-04-26 09:30:50.844224] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: SILVER != GOLD
+[2025-04-26 09:30:50.847299] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: CLAUDE != OPENAIMINI
+[2025-04-26 09:30:50.848228] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: SILVER != GOLD
+[2025-04-26 09:30:50.851235] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GOOGLE != OPENAIMINI
+[2025-04-26 09:30:50.851235] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: SILVER != GOLD
+[2025-04-26 09:30:50.855332] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: GROK != OPENAIMINI
+[2025-04-26 09:30:50.855332] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: SILVER != GOLD
+[2025-04-26 09:30:50.859184] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: OPENAI45 != OPENAIMINI
+[2025-04-26 09:30:50.859184] INFO: runbroker: FAILED: AWARD LEVEL DOES NOT MATCH: SILVER != GOLD
+[2025-04-26 09:30:50.861197] INFO: runbroker: VOTES for 1 : OPENAIMINI : 0
+[2025-04-26 09:30:50.862201] INFO: runbroker: VOTES for 2 : OPENAI : 7
+[2025-04-26 09:30:50.862201] INFO: runbroker: VOTES for 3 : OPENAIO3 : 7
+[2025-04-26 09:30:50.862201] INFO: runbroker: VOTES for 4 : LAMA : 7
+[2025-04-26 09:30:50.862201] INFO: runbroker: VOTES for 5 : DEEPSEEK : 7
+[2025-04-26 09:30:50.862201] INFO: runbroker: VOTES for 6 : CLAUDE : 7
+[2025-04-26 09:30:50.862201] INFO: runbroker: VOTES for 7 : GOOGLE : 7
+[2025-04-26 09:30:50.862201] INFO: runbroker: VOTES for 8 : GROK : 7
+[2025-04-26 09:30:50.862201] INFO: runbroker: VOTES for 9 : OPENAI45 : 7
+[2025-04-26 09:30:50.862201] INFO: runbroker: THE WINNER IS: 2 : {"type_name": "GridPeakDetected", "agent_name": "OPENAI", "message": "Grid peak detected with load of 81348, price of 51.98714 at 04/26/2025 20:00:00", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.98714", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2025-04-26 09:30:50.862201] INFO: runbroker: TIMER_SENT C2AGENT Msg: {"type_name": "GridPeakDetected", "agent_name": "OPENAI", "message": "Grid peak detected with load of 81348, price of 51.98714 at 04/26/2025 20:00:00", "start_date_time": "04/26/2025 20:00:00", "duration_mins": "120", "peak_lmp": "51.98714", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}

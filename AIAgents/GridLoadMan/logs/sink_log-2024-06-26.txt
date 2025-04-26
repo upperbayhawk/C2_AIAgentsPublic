@@ -1,0 +1,98 @@
+[2024-06-26 09:30:04.856782] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 143,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 5000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+06/26/2024 10:00:00,115754,34.87014,86,Mostly Sunny,2835,34.18523
+06/26/2024 11:00:00,122032,40.89981,88,Sunny,3008,36.94585
+06/26/2024 12:00:00,127700,47.92599,91,Mostly Sunny,3157,53.88876
+06/26/2024 13:00:00,131921,50.09841,92,Mostly Sunny,3295,82.73058
+06/26/2024 14:00:00,134862,56.1321,94,Mostly Sunny,3410,129.1763
+06/26/2024 15:00:00,136297,67.83251,94,Mostly Sunny,3481,192.3708
+06/26/2024 16:00:00,136615,77.03368,95,Mostly Sunny,3521,258.0396
+06/26/2024 17:00:00,135310,82.73169,94,Chance Showers And Thunderstorms,3535,312.0325
+06/26/2024 18:00:00,132121,69.30173,92,Chance Showers And Thunderstorms,3500,269.8875
+06/26/2024 19:00:00,127873,57.63428,90,Chance Showers And Thunderstorms,3393,192.6685
+06/26/2024 20:00:00,122872,49.02905,85,Showers And Thunderstorms Likely,3208,132.6954
+06/26/2024 21:00:00,117786,40.12486,83,Showers And Thunderstorms Likely,3031,66.00663
+06/26/2024 22:00:00,110339,30.06447,80,Showers And Thunderstorms Likely,2773,35.28548
+06/26/2024 23:00:00,101888,24.88533,78,Showers And Thunderstorms Likely,2528,30.31085
+
+[2024-06-26 09:31:40.281784] DEBUG: runsink: ERROR
+[2024-06-26 11:57:32.573687] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 143,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 5000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+06/26/2024 12:00:00,127515,47.92599,90,Mostly Sunny,3157,53.88876
+06/26/2024 13:00:00,132402,50.09841,91,Mostly Sunny,3295,82.73058
+06/26/2024 14:00:00,135040,56.1321,93,Mostly Sunny,3410,129.1763
+06/26/2024 15:00:00,136463,67.83251,94,Mostly Sunny,3481,192.3708
+06/26/2024 16:00:00,136712,77.03368,96,Partly Sunny,3521,258.0396
+06/26/2024 17:00:00,135723,82.73169,94,Slight Chance Showers And Thunderstorms,3535,312.0325
+06/26/2024 18:00:00,133080,69.30173,92,Chance Showers And Thunderstorms,3500,269.8875
+06/26/2024 19:00:00,128928,57.63428,89,Chance Showers And Thunderstorms,3393,192.6685
+06/26/2024 20:00:00,123675,49.02905,86,Showers And Thunderstorms Likely,3208,132.6954
+06/26/2024 21:00:00,118358,40.12486,82,Showers And Thunderstorms Likely,3031,66.00663
+06/26/2024 22:00:00,110488,30.06447,80,Showers And Thunderstorms Likely,2773,35.28548
+06/26/2024 23:00:00,101860,24.88533,78,Showers And Thunderstorms,2528,30.31085
+
+[2024-06-26 11:58:52.799503] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-2-0-0", "message": "Grid Peak Detected", "start_date_time": "2024-06-26 17:00:00", "duration_mins": "120", "peak_lmp": "77.03", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2024-06-26 11:58:52.851203] DEBUG: runsink: Grid Peak Detected: SHEDPOWER, Award Level: SILVER, Start Time: 2024-06-26 17:00:00, LMP: 77.03
+[2024-06-26 11:58:52.852206] DEBUG: runsink: Grid Peak Detected: SHEDPOWER, Award Level: SILVER, Start Time: 2024-06-26 17:00:00, LMP: 77.03
+[2024-06-26 11:59:31.377921] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 143,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 5000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+06/26/2024 12:00:00,127515,47.92599,90,Mostly Sunny,3157,53.88876
+06/26/2024 13:00:00,132402,50.09841,91,Mostly Sunny,3295,82.73058
+06/26/2024 14:00:00,135040,56.1321,93,Mostly Sunny,3410,129.1763
+06/26/2024 15:00:00,136463,67.83251,94,Mostly Sunny,3481,192.3708
+06/26/2024 16:00:00,136712,77.03368,96,Partly Sunny,3521,258.0396
+06/26/2024 17:00:00,135723,82.73169,94,Slight Chance Showers And Thunderstorms,3535,312.0325
+06/26/2024 18:00:00,133080,69.30173,92,Chance Showers And Thunderstorms,3500,269.8875
+06/26/2024 19:00:00,128928,57.63428,89,Chance Showers And Thunderstorms,3393,192.6685
+06/26/2024 20:00:00,123675,49.02905,86,Showers And Thunderstorms Likely,3208,132.6954
+06/26/2024 21:00:00,118358,40.12486,82,Showers And Thunderstorms Likely,3031,66.00663
+06/26/2024 22:00:00,110488,30.06447,80,Showers And Thunderstorms Likely,2773,35.28548
+06/26/2024 23:00:00,101860,24.88533,78,Showers And Thunderstorms,2528,30.31085
+
+[2024-06-26 12:00:04.826387] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-2-0-0", "message": "Grid peak detected.", "start_date_time": "2024-06-26 17:00:00", "duration_mins": "120", "peak_lmp": "82.73", "grid_node": "PJM", "award_level": "SILVER", "game_type": "SHEDPOWER"}
+[2024-06-26 12:00:04.868487] DEBUG: runsink: Grid peak detected with award level SILVER and LMP 82.73 at 2024-06-26 17:00:00
+[2024-06-26 12:00:05.871562] DEBUG: runsink: Grid peak detected with award level SILVER and LMP 82.73 at 2024-06-26 17:00:00
+[2024-06-26 12:00:13.344381] DEBUG: runsink: Here are the calculated statistics:
+
+**Load**
+- Average: 126687.00
+- Maximum: 136712 (at 2024-06-26 16:00:00)
+- Minimum: 101860
+- Standard Deviation: 11216.72
+
+**Price**
+- Average: 54.40
+- Maximum: 82.73 (at 2024-06-26 17:00:00)
+- Minimum: 24.89
+- Standard Deviation: 17.81
+
+**Temperature**
+- Average: 88.75
+- Maximum: 96 (at 2024-06-26 16:00:00)
+- Minimum: 78
+- Standard Deviation: 5.94
+
+**Local Load**
+- Average: 3236.00
+- Maximum: 3535 (at 2024-06-26 17:00:00)
+- Minimum: 2528
+- Standard Deviation: 319.58
+
+**Local Price**
+- Average: 146.26
+- Maximum: 312.03 (at 2024-06-26 17:00:00)
+- Minimum: 30.31
+- Standard Deviation: 97.60
+
+**Game Conditions:**
+- Game Type: SHEDPOWER
+- Award Level: SILVER
+- Start Time: 2024-06-26 17:00:00
+- LMP: 82.73
+- Grid Node: PJM
+- Duration: 120 mins
+
+Notice signals for the grid peak detection were successfully sent to the CommandCenter and ControlPanel. If you need further analysis or additional details, feel free to ask!

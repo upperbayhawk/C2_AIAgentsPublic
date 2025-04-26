@@ -1,0 +1,109 @@
+[2024-06-20 09:30:04.947876] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+06/20/2024 10:00:00,117871,41.474,81,Mostly Sunny,2537,41.15978
+06/20/2024 11:00:00,125201,47.87951,84,Mostly Sunny,2694,47.00902
+06/20/2024 12:00:00,132172,58.10026,86,Mostly Sunny,2839,50.45782
+06/20/2024 13:00:00,137652,67.44902,87,Mostly Sunny,2971,61.11361
+06/20/2024 14:00:00,141602,71.49642,89,Mostly Sunny,3076,69.70173
+06/20/2024 15:00:00,144082,79.60336,90,Sunny,3162,74.5871
+06/20/2024 16:00:00,145436,97.79437,90,Mostly Sunny,3226,91.40836
+06/20/2024 17:00:00,145568,103.5677,90,Mostly Sunny,3257,105.3929
+06/20/2024 18:00:00,143697,90.89756,88,Partly Cloudy,3226,109.1951
+06/20/2024 19:00:00,139013,72.8941,85,Partly Cloudy,3111,75.1388
+06/20/2024 20:00:00,133513,56.35291,82,Partly Cloudy,2955,52.68812
+06/20/2024 21:00:00,127548,55.35123,79,Mostly Clear,2800,51.49283
+06/20/2024 22:00:00,118868,39.15206,76,Mostly Clear,2554,36.40126
+06/20/2024 23:00:00,109852,33.6174,74,Mostly Clear,2302,33.2406
+
+[2024-06-20 09:31:13.408458] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-2-0-0", "message": "Grid peak detected", "start_date_time": "2024-06-20 17:00:00", "duration_mins": "120", "peak_lmp": "103.57", "grid_node": "PJM", "award_level": "GOLD", "game_type": "SHEDPOWER"}
+[2024-06-20 09:31:13.461099] DEBUG: runsink: Grid peak detected
+[2024-06-20 09:31:13.461604] DEBUG: runsink: Grid peak detected
+[2024-06-20 09:31:16.398359] DEBUG: runsink: All signals have been successfully sent:
+
+1. **Grid peak detected** message to **C2Agent**.
+2. **Notice** signal to **CommandCenter**.
+3. **Control** signal to **ControlPanel**.
+
+If you have any further requests or need more analysis, feel free to let me know!
+[2024-06-20 12:03:38.534796] DEBUG: runsink: Hello From Below: GridLoadMan-2-0-0
+[2024-06-20 12:03:38.809116] DEBUG: runsink: =========================
+[2024-06-20 12:03:38.809116] DEBUG: runsink: Connected to MQTT
+[2024-06-20 12:03:38.812212] DEBUG: runsink: Connected with result code 0
+[2024-06-20 12:04:58.297543] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+06/20/2024 13:00:00,137347,67.44902,87,Mostly Sunny,2971,61.11361
+06/20/2024 14:00:00,141522,71.49642,89,Mostly Sunny,3076,69.70173
+06/20/2024 15:00:00,144051,79.60336,90,Sunny,3162,74.5871
+06/20/2024 16:00:00,145436,97.79437,90,Mostly Sunny,3226,91.40836
+06/20/2024 17:00:00,145568,103.5677,90,Mostly Sunny,3257,105.3929
+06/20/2024 18:00:00,143697,90.89756,88,Partly Cloudy,3226,109.1951
+06/20/2024 19:00:00,139013,72.8941,85,Partly Cloudy,3111,75.1388
+06/20/2024 20:00:00,133513,56.35291,82,Partly Cloudy,2955,52.68812
+06/20/2024 21:00:00,127548,55.35123,79,Mostly Clear,2800,51.49283
+06/20/2024 22:00:00,118868,39.15206,76,Mostly Clear,2554,36.40126
+06/20/2024 23:00:00,109852,33.6174,74,Mostly Clear,2302,33.2406
+
+[2024-06-20 12:05:47.032958] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-2-0-0", "message": "Grid Peak Detected", "start_date_time": "2024-06-20 17:00:00", "duration_mins": "120", "peak_lmp": "103.57", "grid_node": "PJM", "award_level": "GOLD", "game_type": "SHEDPOWER"}
+[2024-06-20 12:05:47.078789] DEBUG: runsink: Grid Peak Detected: SHEDPOWER, Award Level: GOLD, Start Time: 2024-06-20 17:00:00, LMP: 103.57
+[2024-06-20 12:05:47.078789] DEBUG: runsink: Grid Peak Detected: SHEDPOWER, Award Level: GOLD, Start Time: 2024-06-20 17:00:00, LMP: 103.57
+[2024-06-20 12:05:49.992760] DEBUG: runsink: The GridPeakDetected message has been successfully sent to `C2Agent`, and notices have been sent to `CommandCenter` and `ControlPanel`.
+
+If you need any further analysis or have additional data to examine, feel free to let me know!
+[2024-06-20 12:09:48.145303] DEBUG: runsink: Examine the following time series data. The data is in comma separated format (CSV) with seven columns. The columns are Datetime, Load, Price, Temp, Forecast, LocalLoad and LocalPrice. The first row of CSV data has the column names. The values are at 1 hour intervals and are for the current day. Calculate the following statistics for each of the columns; average, maximum and minimum values and standard deviation.  Display the statistics with the Datetime of the maximum values. If the maximum Load value is greater than 140,000, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum Load and the LMP is the Price at the maximum Load. Otherwise, if the maximum LocalLoad is greater than 3500, then the game_type is "SHEDPOWER", the award_level is "GOLD", the startime is the Datetime of the maximum LocalLoad and the LMP is the LocalPrice at the maximum LocalLoad. If these two conditions are not met then if the maximum Price value is greater than 30, then the game_type is "SHEDPOWER" and the award_level is "SILVER", the startime is the Datetime of the maximum Price and the LMP is the Price at the maximum Load. Otherwise, if the maximum Price is greater than 25, then the game_type is "SHEDPOWER" and the award_level is "BRONZE", the startime is the Datetime of the maximum Price and the LMP is the maximum Price. If none of these conditions are met then there is "NOGAME". If the award_level is "SILVER", "BRONZE" or "GOLD", then send a GridPeakDetected massage using the function GridPeakDetected to C2Agent. Use two decimal places for all calculations. If a GridPeakDetected message is sent, then also send the message as a notice to CommandCenter and to the ControlPanel using functions. The grid node is "PJM". Set the duration to 120 mins. Check your results and make sure you are using the correct maximum Load and maximum Price. Display all results.
+
+Data values are Time,Load,Price,Temp,Forecast,LocalLoad,LocalPrice
+06/20/2024 13:00:00,137347,67.44902,87,Mostly Sunny,2971,61.11361
+06/20/2024 14:00:00,141522,71.49642,89,Mostly Sunny,3076,69.70173
+06/20/2024 15:00:00,144051,79.60336,90,Sunny,3162,74.5871
+06/20/2024 16:00:00,145436,97.79437,90,Mostly Sunny,3226,91.40836
+06/20/2024 17:00:00,145568,103.5677,90,Mostly Sunny,3257,105.3929
+06/20/2024 18:00:00,143697,90.89756,88,Partly Cloudy,3226,109.1951
+06/20/2024 19:00:00,139013,72.8941,85,Partly Cloudy,3111,75.1388
+06/20/2024 20:00:00,133513,56.35291,82,Partly Cloudy,2955,52.68812
+06/20/2024 21:00:00,127548,55.35123,79,Mostly Clear,2800,51.49283
+06/20/2024 22:00:00,118868,39.15206,76,Mostly Clear,2554,36.40126
+06/20/2024 23:00:00,109852,33.6174,74,Mostly Clear,2302,33.2406
+
+[2024-06-20 12:10:54.304708] DEBUG: runsink: {"type_name": "GridPeakDetected", "agent_name": "GridLoadMan-2-0-0", "message": "Grid Peak Detected", "start_date_time": "2024-06-20 17:00:00", "duration_mins": "120", "peak_lmp": "103.57", "grid_node": "PJM", "award_level": "GOLD", "game_type": "SHEDPOWER"}
+[2024-06-20 12:10:54.352277] DEBUG: runsink: Grid Peak Detected: SHEDPOWER, Award Level: GOLD, Start Time: 2024-06-20 17:00:00, LMP: 103.57
+[2024-06-20 12:10:54.353248] DEBUG: runsink: Grid Peak Detected: SHEDPOWER, Award Level: GOLD, Start Time: 2024-06-20 17:00:00, LMP: 103.57
+[2024-06-20 12:11:00.334388] DEBUG: runsink: The GridPeakDetected message has again been successfully sent to `C2Agent`, and notices have been sent to `CommandCenter` and `ControlPanel`.
+
+If you have more data to analyze or need further assistance, feel free to let me know!
+[2024-06-20 17:38:17.656502] DEBUG: runsink: Here are the detailed statistics for each column:
+
+### Statistics:
+
+- **Load:**
+  - Average: 135128.64
+  - Maximum: 145568.00 (Datetime: 2024-06-20 17:00:00)
+  - Minimum: 109852.00
+  - Standard Deviation: 11800.53
+
+- **Price:**
+  - Average: 69.83
+  - Maximum: 103.57 (Datetime: 2024-06-20 17:00:00)
+  - Minimum: 33.62
+  - Standard Deviation: 22.63
+
+- **Temp:**
+  - Average: 84.55
+  - Maximum: 90.00 (Datetime: 2024-06-20 15:00:00)
+  - Minimum: 74.00
+  - Standard Deviation: 5.91
+
+- **LocalLoad:**
+  - Average: 2967.27
+  - Maximum: 3257.00 (Datetime: 2024-06-20 17:00:00)
+  - Minimum: 2302.00
+  - Standard Deviation: 304.92
+
+- **LocalPrice:**
+  - Average: 69.12
+  - Maximum: 109.20 (Datetime: 2024-06-20 18:00:00)
+  - Minimum: 33.24
+  - Standard Deviation: 25.47
+
+Is there anything else you would like to analyze?
