@@ -1,3 +1,0 @@
-[2025-01-23 22:10:28.849612] DEBUG: runserver: Hello From Below: GridLoadMan-2-0-0
-[2025-01-23 22:10:29.098984] DEBUG: openaichatlib: Initializing OpenAIChatLib...
-[2025-01-23 22:10:29.329077] DEBUG: runserver: Connected with result code 0

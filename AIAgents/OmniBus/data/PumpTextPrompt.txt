@@ -1,1 +1,0 @@
-The data below is in JSON format and contains current weather data for Boston. Analyze the data using all the methods you have available to you and give insights into the current and near-term weater in the Boston area. The data follows:
